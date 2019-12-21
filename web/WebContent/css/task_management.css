@@ -1,0 +1,326 @@
+* {
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* canvas {
+    position: absolute;
+    background-color: #CCC;
+    color: black;
+    z-index: 5;
+} */
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.container-fluid {
+    float: left;
+    width: 94%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+/* .prompt {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    display: none;
+    color: aqua;
+    background-color: #ccc;
+    z-index: 2;
+} */
+.prompt {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    border: 1px solid rgb(52, 152, 219);
+    background-color: rgb(250, 250, 250);
+    border-radius: 0;
+    z-index: 5;
+    transform: translate(180px, 0px);
+    display: none;
+}
+
+/* .prompt span {
+    position: absolute;
+    left: 60px;
+    bottom: -50px;
+    border: 10px solid;
+    border-color: rgb(222, 231, 236) transparent transparent transparent;
+    transform: rotate(90deg) translate(-70px, 80px);
+    z-index: 6;
+} */
+.prompt .delete, .detail {
+    display: block;
+    width: 100%;
+    height: 50%;
+    border: 1px solid #fff;
+    border-radius: 0 !important;
+    font-size: 12px;
+    color: rgb(52, 152, 219);
+    font-weight: bolder;
+}
+
+/* .prompt strong {
+    position: absolute;
+    left: 60px;
+    bottom: -40px;
+    border: 20px solid;
+    border-color: white transparent transparent transparent
+} */
+
+.nav {
+    width: 60px;
+    height: 625px;
+    padding-top: 10px;
+    /* border: 1px solid #000; */
+    background-color: black;
+    float: left;
+    display: block;
+}
+
+.nav_active {
+    color: #fff !important;
+}
+
+div[class^="nav_box"] {
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid #ccc; */
+    padding-top: 10px;
+    color: rgba(225, 230, 236, 0.5)
+}
+
+div[class^="nav_box"]:hover {
+    cursor: pointer;
+    color: #fff;
+    transition: all .4s;
+}
+
+.nav_box>i,
+span {
+    text-align: center;
+    display: block;
+}
+
+.head {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin-top: 5px;
+    padding: 5px 5px 5px 30px;
+    /* background-color: red; */
+    float: left;
+    display: block;
+    box-shadow: 0px 0px 10px #95a5a650;
+    line-height: 0px;
+    /* behavior: url("C:\Users\dell\Desktop\web\css\ie-css3.htc"); */
+}
+
+.head_title {
+    width: 100px;
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: bolder;
+    cursor: pointer;
+    position: absolute;
+}
+
+.head>span {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    line-height: 35px;
+    text-align: center;
+    color: rgb(255, 255, 255, .9);
+    top: 12px;
+    right: 40px;
+}
+
+.subnav {
+    width: 180px;
+    height: 300px;
+    margin-top: 5px;
+    padding-top: 20px;
+    float: left;
+    user-select: none;
+    /* border-right: 1px solid #3498db30; */
+}
+
+div[class^="subnav_"] {
+    padding: 0px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5%;
+    line-height: 20px;
+    color: #00000080;
+    font-weight: bold;
+    cursor: default;
+}
+
+div[class^="subnav_"]:hover {
+    background-color: rgba(52, 152, 219, .35);
+    transition: .4s;
+}
+
+.subnav_active {
+    background-color: rgba(52, 152, 219, .35);
+}
+
+div[class^="subnav_"] i {
+    margin-right: 10px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.i_hover {
+    color: rgba(52, 152, 219, .45);
+}
+
+.nav_content {
+    padding: 20px 20px 20px 50px;
+    width: 82%;
+    height: 500px;
+    float: left;
+    margin: 5px;
+}
+
+.content {
+    width: 100%;
+    height: 85%;
+    margin: 0 auto;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+.content_active {
+    z-index: 10;
+}
+
+div[class^="task_box"] {
+    position: relative;
+    width: 22%;
+    height: 25%;
+    margin: 1%;
+    float: left;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.task_box i {
+    position: absolute;
+    display: block;
+    color: #ffffff;
+    right: 5px;
+    top: 2px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.task_box_one {
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    /* line-height: 50px; */
+    cursor: pointer;
+    user-select: none;
+}
+
+div[class^="task_box"]:hover {
+    /* transform: translateY(-3px); */
+    box-shadow: 0 0 2px #ccc;
+    transition: .4s;
+}
+
+.task_box_one>i {
+    display: block;
+    transform: translateY(25px);
+    color: #95a5a6;
+    user-select: none;
+}
+
+.task_box_one>span {
+    display: block;
+    transform: translateY(25px);
+    color: #95a5a6;
+}
+
+.task_box {
+    background-color: #3498db;
+}
+
+.task_box>p {
+    color: #ecf0f1;
+}
+
+.task_box .task_title {
+    display: block;
+    text-align: center;
+    text-align: left;
+    margin: 0;
+    padding: 5px;
+}
+
+/* .start_time,.end_time {
+    -webkit-font-size: 20px;
+    -webkit-transform: scale(0.6) translate(60px, 50px);
+    font-size: 18px;
+    padding: 0 10px 0 0;
+    margin: 0;
+} */
+.task_box_des {
+    -webkit-font-size: 20px;
+    transform: scale(0.6) translate(-30%, 50px);
+    font-size: 18px;
+    width: 150%;
+    text-align: right;
+    padding: 0 10px 0 0;
+    margin: 0;
+}
+
+.page_number {
+    width: 100%;
+    height: 15%;
+    /* border: 1px dotted #ccc; */
+    position: relative;
+}
+
+.page_number>ul {
+    position: absolute;
+    left: 30%;
+}
+
+
+
+@media screen and (max-width:1170px) {
+
+    /* .head {
+        width: 100%;
+    } */
+    body {
+        width: 1170px;
+    }
+
+    .container-fluid {
+        width: 1080px;
+    }
+}
+
+
+
+
+
+@media screen and (min-height:628px) {
+    .nav {
+        height: 100vh;
+    }
+}

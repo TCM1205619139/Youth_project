@@ -1,0 +1,529 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+/*html {
+    font-family: 'Lora', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}*/
+body {
+	width: 100%;
+}
+#banner{
+	width: 100%;
+/*	height: 100%;*/
+	background-image: url('../images/banner.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	position: relative;
+/*	filter: grayscale(30%);*/
+}
+div[class^="col"] span {
+	font-size: 36px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	line-height: 80px;
+}
+#banner a {
+	text-decoration: none;
+	color: #bdc3c7;
+	transition: all .4s;
+	line-height: 80px;
+	font-size: 16px;
+}
+#banner a:hover {
+	color: #2980b9;
+}
+#banner .banner_nav{
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	z-index: 10;
+	background-color: rgb(0,0,0,.1);
+}
+
+.nav {
+	clear: both;
+}
+div[class^="col"]{
+	float: left;
+	color: #fff;
+}
+
+#banner .banner_content{
+	width: 100%;
+	height: 616px;
+	background-color: rgb(0,0,0,.7);
+	text-align: center;
+	position: relative;
+}
+.banner_content>div{
+	width: 100%;
+	position: absolute;
+	top: 250px;
+	margin: 0 auto;
+}
+
+#banner .banner_content h4{
+	display: inline-block;
+	color: rgb(255,255,255);
+	font-size: 30px;
+	letter-spacing: 1px;
+}
+#banner .banner_content p{
+	color: rgb(255,255,255);
+	line-height: 50px;
+	letter-spacing: 2px;
+	font-size: 10px;
+}
+#login_click{
+	display: inline-block;
+	width: 140px;
+	height: 40px;
+	margin-top: 10px;
+	/*background-color: rgb(66,66,66);*/
+	background-color: rgb(20,20,20);
+	border: 1px solid rgb(96,96,96);
+	color: #fff;
+	letter-spacing: 2px;
+	transition: all 1s;
+/*	text-align: center;*/
+}
+#login_click:hover{
+	background-color: rgb(66,66,66);
+}
+
+
+
+
+
+
+
+
+#about{
+	width: 100%;
+	height: 616px;
+	/*background-color: rgb(210,210,210,0.4);*/
+	background-color: #fff;
+}
+#about .top{
+	width: 100%；
+	height: 40%;
+	font-weight: bold;
+	text-align: center;
+	box-sizing: border-box;
+}
+#about .top h2{
+	display: inline-block;
+	margin-top: 50px;
+	font-size: 32px;
+}
+#about .top p{
+	margin-top: 20px;
+	color: rgb(96,96,96);
+	font-size: 5px;
+/*	letter-spacing: 0.5px;*/
+}
+#about .content{
+	position: relative;
+	width: 100%;
+	height: 60%;
+	bottom: -40px;
+}
+#about .content .content_left{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	float: left;
+	/*background-color: red*/
+}
+#about .content .content_left img {
+	margin-left: 80px;
+	width: 85%;
+	height: 95%
+	z-index: 1;
+	transition: all .2s;
+}
+#about .content .content_left img:hover{
+	box-shadow: 0 0 10px black;
+}
+#about .content .content_right{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+#about .content .content_right h2{
+	font-size: 28px;
+	padding-left: .5em;
+}
+#about .content .content_right h3{
+	font-size: 24px;
+	padding-left: .5em;
+}
+#about .content .content_right p{
+	padding-left: 1em;
+	padding-right: 4em;
+}
+#about .content_right .content_right_top{
+	width: 100%;
+	height: 50%
+}
+#about .content_right_bottom{
+	width: 100%;
+	height: 50%;
+}
+#about .content_right_bottom_left{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+#about .content_right_bottom_right{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+#info{
+	width: 100%;
+	height: 616px;
+	background-color: #fff;
+	position: relative;
+}
+.info_content{
+	width: 98%;
+	height: 80%;
+	left: 2%;
+	top: 10%;
+	background-color: rgb(169,169,169,0.15);
+	position: absolute;
+}
+.info_content .wrap{
+	float: left;
+	width: 67%;
+	height: 100%;
+	margin-right: 3%;
+	position: relative;
+/*	background-color: red;*/
+}
+.btn1{
+	position: absolute;
+	width: 10%;
+	height: 60%;
+	top: 20%;
+	background-color: rgb(255,255,255,0.1);
+	cursor: pointer;
+	z-index: 9;
+	border: 1px solid rgb(0,0,0,0);
+	background-color: rgb(0,0,0,0);
+	outline: none !important;
+}
+/*.btn:visited{
+	border: 1px solid rgb(255,255,255);
+}*/
+.btn1 i{
+	font-size: 45px;
+	color: rgb(255,255,255,.4);
+}
+.btn1 i:hover{
+	color: rgb(255,255,255,.8);
+}
+#goPro{
+	left: 0.1px;
+}
+#goNext{
+	right: 0.1px;
+}
+.info_content .wrap .list{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.info_content .wrap .list .item{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	transition: all 1.5s;
+}
+.info_content .wrap .item.active{
+	z-index: 2;
+	opacity: 1;
+	transition: all 1.5s;
+}
+.wrap img{
+	width: 100%;
+	height: 100%;
+}
+.wrap .point_list{
+	list-style: none;
+	position: absolute;
+	right: 3%;
+	bottom: 5%;
+	z-index: 9;
+
+}
+.wrap .point_list ._point{
+	width: 8px;
+	height: 8px;
+	border-radius: 8px;
+	float: left; 
+	margin-right: 20px;
+	background-color: rgba(255,255,255);
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgba(169,169,169);
+	cursor: pointer;
+	transition: all 1s;
+}
+.wrap .point_list ._point:hover{
+	background-color: rgba(69,69,69,0.8);
+}
+.wrap .point_list ._point.active{
+	background-color: rgba(69,69,69);
+}
+.info_content .msg{
+	float: left;
+	width: 30%;
+	height: 100%;
+	background-color: pink;
+}
+
+
+
+
+
+
+
+
+
+#task{
+	width: 100%;
+	height: 768px;
+	background-color: rgb(169,169,169,0.15);
+}
+#task .top{
+	width: 100%;
+	height: 30%;
+	text-align: center;
+
+}
+#task .top h2{
+	padding-top: 100px;
+	font-size: 28px;
+	letter-spacing: 2px;
+}
+#task .top p{
+	font-size: 14px;
+	padding-top: 20px;
+}
+#task .task_list{
+	width: 100%;
+	height: 70%;
+	position: relative;
+}
+#task .task_list ul{
+	width: 90%;
+	height: 92%;
+	top: 0%;
+	left: 5%;
+	position: absolute;
+}
+#task .task_list li{
+	position: relative;
+	display: block;
+	width: 30%;
+	height: 200px;
+	background-color: #fff;
+	margin: 1% 0.2% 1% 1.5%;
+	float: left;
+	text-align: center;
+	transition: all .5s;
+}
+#task .task_list li:hover{
+	box-shadow:0 0 10px #000;
+	cursor: pointer;
+}
+#task .task_list li div{
+	position: absolute;
+	width: 90%;
+	height: 80%;
+	top: 10%;
+	left: 5%;
+}
+#task .task_list div a{
+	display: inline-block;
+	width: 90%;
+	height: 90%;
+	left: 5%;
+	top: 5%;
+	position: absolute;
+}
+#task .task_list li div h4{
+	display: inline-block;
+	width: 90%;
+	height: 20%;
+	padding-top: 10px;
+	font-weight: normal;
+	font-size: 24px;
+}
+#task .task_list li div p{
+	display: inline-block;
+	font-size: 10px;
+	margin-top: 10px;
+}
+#task .task_list li i{
+	display:inline-block;
+	font-size: 36px;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+#contact{
+	width: 100%;
+	height: 768px;
+	/*background-color: rgb(169,169,169,0.15);*/
+	background-color: #ecf0f1;
+	position: relative;
+}
+
+.contact_msg{
+	width: 50%;
+	top: 100px;
+	left: 25%;
+	position: relative;
+}
+.contact_msg h2{
+	text-align: center;
+	font-weight: bold;
+	font-size: 36px;
+}
+.contact_msg p{
+	text-align: center;
+}
+
+form {
+	position: absolute;
+	float: left;
+	display: block;
+	width: 60%;
+	height: 397px;
+	left: 5%;
+	bottom: 150px;
+}
+form input {
+	border-radius: 10px;
+	display: inline-block;
+	width: 90%;
+	height: 50px;
+	margin: 10px 10px;
+	border: 1px solid #e4e7e9;
+	padding: 15px;
+	font-size: 16px;
+}
+textarea {
+	display: inline-block;
+	border-radius: 10px;
+	width: 90%;
+	height: 150px;
+	margin: 10px 10px !important;
+	border: 1px solid #e4e7e9;
+	padding: 15px;
+	font-size: 16px;
+}
+form input[type="submit"] {
+	position: absolute;
+	display: block;
+	width: 20%;
+	height: 55px;
+	padding: 0;
+	left: 35%;
+	background-color: #000;
+	transition: all .4s;
+	color: #fff;
+}
+form input[type="submit"]:hover {
+	background-color: rgb(0,0,0,.85);
+}
+
+.contact_info {
+	position: absolute;
+	float: left;
+	width: 30%;
+	margin-left: 10px;
+	left: 65%;
+	top: 230px;
+}
+.info_item {
+	width: 100%;
+	height: 70px;
+	margin-bottom: 20px;
+}
+.info_item .icon {
+	position: relative;
+	float: left;
+	width: 70px;
+	height: 100%;
+	background-color: rgb(169,169,169,.1);
+}
+.icon i{
+	display: block;
+	position: absolute;
+	font-size: 40px;
+	left: 13px;
+	top: 7px;
+}
+.icon .iconfont:hover {
+	color: #3498db;
+	cursor: pointer;
+}
+.icon:hover {
+	background-color: #ecf0f1;
+}
+.info_item .contact_msg1 {
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+.info_item .contact_msg1 p {
+	padding: 10px;
+	color: #959595;
+}
+
+.footer{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	background-color: #000;
+	bottom: 0;
+}
+
+
+/*媒体查询，修改bootstrap的默认值*/
+@media screen and (min-width: 1200px){
+	.container{
+		width: 1200px !important;
+	}
+}
+@media screen and (max-width: 1199px){
+	.container{
+		width: 1200px !important;
+		height: 80px !important;
+	}
+}
+
+/*@media screen and (max-width: 1200px){
+    body{
+        background: #000;
+    }
+}*/

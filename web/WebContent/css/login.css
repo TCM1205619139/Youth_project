@@ -1,0 +1,176 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #333;
+}
+.login-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh; 
+	/*background-image: linear-gradient(
+			45deg,
+			#9fbaa8,
+			#31354c
+		); */
+	background-image: linear-gradient(125deg,#34495e,#9b59b6,#27ae60,#1abc9c);
+	animation: bganimation 15s infinite;
+	background-size: 400%;
+	transition: 0.4s; /*过度效果 默认属性:all 0 ease 0*/
+}
+.login-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /*定义 2D 转换8 */
+	color: white;
+	text-align: center;
+}
+.login-form h1 {
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-top: 0;
+}
+.txtb {
+	font-size: 14px;
+	display: block;
+	box-sizing: border-box;
+	width: 280px;
+	background: #ffffff28;
+	border: 1px solid white;
+	padding: 10px 20px;
+	color: white;
+	outline: none;
+	margin: 10px 0;
+	border-radius: 6px;
+	text-align: center;
+}
+.login-btn {
+	width: 280px;
+	background: #2c3e50;
+	border: 0;
+	color: white;
+	padding: 10px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.registered-btn {
+	color: #fff;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	cursor: pointer;
+	font-size: 20px;
+	user-select: none;
+}
+
+.registered-btn i{
+	font-size: 25px;
+}
+.show-login-btn {
+	position: absolute;
+	top: 40px;
+	right: 30px;
+	transform: translate(-50%, -50%);
+	color: #34495e;
+/*	border: 1px solid;*/
+	cursor: pointer;
+	font-size: 20px;
+	user-select: none;
+}
+.show-login-btn i{
+	font-size: 20px;
+}
+.registered-img{
+	width: 30%;
+	height: 100%;
+	background-image: url(../images/left.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+/*.registered-img img{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}*/
+.registered-box{
+	background-color: #ecf0f1;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+}
+.registered-form {
+    width: 40%;
+    height: 80%;
+    top: 12%;
+    left: 45%;
+    position: absolute;
+    background-color: #ecf0f1;
+    color: #000;
+    text-align: center;
+}
+.registered-form input {
+    display: block;
+    font-size: 18px;
+    box-sizing: border-box;
+    width: 95%;
+    height: 50px;
+    background: #ffffff28;
+    border: 1px solid #3498db;
+    padding: 10px 20px;
+    color: #000;
+    outline: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    text-align: left;
+    /* cursor: pointer; */
+}
+.registered-form p{
+	text-align: left;
+	color: red;
+	font-size: 8px;
+}
+.registered-box input[type="submit"]{
+	text-align: center;
+	background: #2980b9;
+	cursor: pointer;
+}
+.registered-box input[type="submit"]:hover{
+	background: #3498db;
+}
+.login-box input::-webkit-input-placeholder { /* WebKit browsers */ 
+color: #ecf0f1; 
+opacity: .5;
+} 
+
+.login-box input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+color: #ecf0f1; 
+opacity: .5;
+} 
+
+.login-box input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+ color: #ecf0f1; 
+opacity: .5;
+} 
+
+.login-box input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+color: #ecf0f1; 
+opacity: .5;
+}
+.showed {
+	left: -100%;
+}
+
+@keyframes bganimation{
+	0%{
+		background-position: 0% 50%;
+	}
+	50%{
+		background-position:  100% 50%;
+	}
+	100%{
+		background-position: 0% 50%;
+	}
+}

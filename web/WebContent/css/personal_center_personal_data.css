@@ -1,0 +1,327 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    background-color:#e8ecec;
+}
+nav>.container {
+    height: 70px;
+}
+.container .navbar-header a {
+    margin-top: 8px;
+    /* background: url("images\banner.jpg"); */
+    padding: 0;
+}
+.container .navbar-header a img{
+    width: 60px;
+    height: 55px;
+}
+.container .navbar-header .navbar-brand h3 {
+    color: aliceblue;
+    line-height: 10px;
+}
+.container #bs-example-navbar-collapse-1 li a{
+    top: 8px;
+    font-size: 18px;
+}
+.button_sm {
+    top: 8px;
+}
+
+
+
+.content {
+    margin: 15px 0px;
+    padding: 15px 25px;
+    background-color: #fff;
+}
+.content_nav ul {
+    border-bottom: 1px solid #d6dfe0;
+}
+.content_nav ul li {
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    margin: 0;
+}
+.content_nav ul li a {
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    padding-left: 15px;
+    color: #000;
+}
+.content_nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(34, 180, 90);
+}
+.content_nav .active {
+    border-bottom: 2px solid rgb(34, 180, 90);
+}
+
+.content_des {
+    padding: 10px;
+}
+.content_des p {
+    font-size: 10px;
+    color: #95a5a6;
+}
+
+.content_info {
+    padding: 10px;
+}
+.content_info .head_portrait {
+    height: 100px;
+    margin: 10px;
+}
+
+.content_info .head_portrait img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ccc;
+    background-size: cover;
+    display: block;
+    float: left;
+    margin: 0 20px;
+    border-radius: 100%;
+}
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    margin-top: 20px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+a.file :hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+}
+.content_info .head_portrait .file input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.content_nickname {
+    margin: 10px;
+    height: 60px;
+}
+
+.content .content_info div input[type="text"],input[type="email"],input[type="tel"] {
+    height: 24px;
+    font-size: 14px;
+    line-height: 14px;
+    width: 40%;
+    display: block;
+    transform: translateY(18px);
+    text-indent: 10px;
+    float: left;
+    margin: 0;
+}
+.content_email {
+    margin: 10px;
+    height: 240px;
+}
+.content_email .email_des {
+    height: 175px;
+    width: 80%;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.email_des>p {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    font-size: 12px;
+}
+.email_verify_notification {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    padding: 10px;
+    background-color: #f1f2f690;
+}
+.email_verify_notification i {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #FFC312;
+    font-size: 50px !important;
+}
+ .email_verify_notification p:nth-of-type(1) {
+    display: block;
+    margin-top: 20px;
+} 
+
+.email_verify_notification p {
+    display: block;
+    margin: 5px 0 0 80px;
+    font-size: 12px;
+    color: #00000080;
+    /* margin-left: 50px; */
+}
+.email_verify_notification a {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    top: 96px;
+    left: 240px;
+    color: rgb(34, 180, 90);
+}
+
+.content .content_info div button {
+    display: block;
+    transform: translate(20px, 20px);
+    border: none;
+    font-size: 12px;
+    color: rgb(18, 175, 84);
+    background-color: #fff;
+    user-select: none;
+}
+.content .content_info div button:hover {
+    color: rgb(18, 175, 84,.8);
+    transition: all .2s;
+}
+.content .content_info>div>p {
+    display: block;
+    width: 80px;
+    font-size: 12px;
+    float: left;
+    padding: 20px 0;
+    margin: 0 10px;
+} 
+.content_name {
+    margin: 10px;
+    height: 50px;
+}
+.content_birth {
+    margin: 10px;
+    height: 50px;
+}
+.content_birth input[type="date"] {
+    height: 24px;
+    text-align: center;
+    line-height: 12px;
+    font-size: 14px;
+    width: 15%;
+    display: block;
+    transform: translateY(18px);
+    float: left;
+    margin: 0;
+}
+.content_tel {
+    margin: 10px;
+    height: 60px;
+}
+
+.content_gender {
+    margin: 10px;
+    height: 50px;
+}
+.gender {
+    position: relative;
+    line-height: 50px;
+    width: 10%;
+    float: left;
+}
+.gender input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+.gender label {
+    position: absolute;
+    left: 5px;
+    top: 17px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+.gender span {
+    font-size: 12px;
+}
+.gender input:checked+label {
+    background-color: #3c86f1;
+    border: 1px solid #3c86f1;
+}
+.gender input:checked+label::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 10px;
+    top: 1px;
+    left: 4px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+.content_addr {
+    margin: 10px;
+    height: 50px;
+}
+.content_submit {
+    margin: 10px;
+    height: 50px;
+}
+
+
+
+.footer {
+    height: 100px;
+    background-color: rgb(27, 24, 24);
+}
+
+@media screen and (max-width: 992px) {
+    /* body {
+        width: 991px;
+    } */
+    /* .navbar {
+        width: 991px;
+    } */
+
+    .navbar {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .container {
+        width: 840px;
+    }
+    .content {
+        padding: 0px;
+        margin: 0px ;
+    }
+    .email_verify_notification a {
+        transform: translate(0,17px);
+    }
+}
+/* @media screen and (max-width: 875px) {
+    .navbar {
+        width: 875px;
+        padding: 0 10px;
+    }
+    .container {
+        width: 840px;
+    }
+} */
+@media screen and (max-width: 1400px) {
+    .footer {
+        width: 100%;
+    }
+}

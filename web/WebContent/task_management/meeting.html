@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会议任务</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist\css\bootstrap.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/task_management.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../js/meeting.js"></script>
+    <script src="../js/task_managementCss.js"></script>
+    <script src="../js/lib.js"></script>
+</head>
+
+<body>
+    <!-- 隐藏的提交表单 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">新增会议任务</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="txt_meeting_theme">会议主题</label>
+                        <input type="text" name="txt_meeting_theme" class="form-control" id="txt_meeting_theme"
+                            placeholder="会议主题">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_meeting_place">会议地点</label>
+                        <input type="text" name="txt_meeting_place" class="form-control" id="txt_meeting_place"
+                            placeholder="会议地点">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_meeting_participants">参会人员</label>
+                        <input type="text" name="txt_meeting_participants" class="form-control"
+                            id="txt_meeting_participants" placeholder="参会人员">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_meeting_content">会议内容</label>
+                        <input type="text" name="txt_meeting_content" class="form-control" id="txt_meeting_content"
+                            placeholder="会议内容">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_meeting_desc">描述/其他</label>
+                        <input type="text" name="txt_meeting_desc" class="form-control" id="txt_meeting_desc"
+                            placeholder="描述/其他">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_meeting_time">时间</label>
+                        <input type="date" name="txt_meeting_time" class="form-control" id="txt_meeting_time"
+                            placeholder="描述/其他">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-remove" aria-hidden="true"></span>取消</button>
+                    <button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>发布</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="prompt">
+        <span></span>
+        <button type="button" class="btn btn-default delete">删除任务</button>
+        <button type="button" class="btn btn-default detail">查看详情</button>
+    </div> -->
+
+
+    <div class="nav">
+        <!-- 左侧黑体导航栏 -->
+        <div class="nav_box nav_active" value="meeting"><i class="iconfont">&#xe630;</i><span>会议</span></div>
+        <div class="nav_box" value="invigilate"><i class="iconfont">&#xe62f;</i><span>监考</span></div>
+        <div class="nav_box" value="audit"><i class="iconfont">&#xe63f;</i><span>听课</span></div>
+        <div class="nav_box" value="notice"><i class="iconfont">&#xe615;</i><span>通知</span></div>
+        <div class="nav_box" value="other"><i class="iconfont">&#xe62b;</i><span>其他</span></div>
+        <div class="nav_box" value="gather"><i class="iconfont">&#xe667;</i><span>汇总</span></div>
+    </div>
+
+    <div class="container-fluid fluid">
+        <div class="head">
+            <!-- 头部标题 -->
+            <p class="head_title">会议任务</p>
+            <span>0</span>
+        </div>
+
+        <div class="subnav">
+            <!-- 左侧小导航栏 -->
+            <div class="subnav_1 subnav_active">
+                <span><i class="iconfont">&#xe71c;</i>我创建的项目</span>
+            </div>
+            <div class="subnav_2">
+                <span><i class="iconfont">&#xe68a;</i>进行中的项目</span>
+            </div>
+            <div class="subnav_3">
+                <span><i class="iconfont">&#xe669;</i>已完成的项目</span>
+            </div>
+        </div>
+
+        <div class="nav_content">
+            <div class="content">
+                <div class="task_box_one">
+                    <!-- 添加任务盒子 -->
+                    <i class="iconfont" style="font-size: 22px; color:#95a5a6;">&#xe620;</i>
+                    <span>添加任务</span>
+                </div>
+                
+            </div>
+
+            <div aria-label="Page navigation" class="page_number">
+                <!-- 页码部分 -->
+                <ul class="pagination">
+                    <li>
+                        <!-- 最前页 -->
+                        <a href="javascript:;" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="javascript:;">1</a></li>
+                    <li><a href="javascript:;">2</a></li>
+                    <li><a href="javascript:;">4</a></li>
+                    <li><a href="javascript:;">3</a></li>
+                    <li><a href="javascript:;">5</a></li>
+                    <li><a href="javascript:;">6</a></li>
+                    <li><a href="javascript:;">7</a></li>
+                    <li>
+                        <!-- 最后一页 -->
+                        <a href="javascript:;" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
