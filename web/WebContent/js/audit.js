@@ -287,7 +287,7 @@ $(function () {
     });
 
     $(".prompt").children(".detail").on("click", function () { //查看任务详情按钮
-
+        
     });
 
 
