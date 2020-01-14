@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>监考任务</title>
+    <title>通知任务</title>
     <link rel="stylesheet" href="../bootstrap-3.3.7-dist\css\bootstrap.css">
     <link rel="stylesheet" href="../css/icon.css">
     <link rel="stylesheet" href="../css/task_management.css">
@@ -23,43 +23,38 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">新增监考任务</h4>
+                    <h4 class="modal-title" id="myModalLabel">新增通知任务</h4>
                 </div>
                 <div class="modal-body">
 
                     <div class="form-group">
-                        <label for="txt_exam_subject">考试科目</label>
-                        <input type="text" name="txt_exam_subject" class="form-control" id="txt_exam_subject"
-                            placeholder="考试科目">
+                        <label for="txt_meeting_theme">通知任务主题</label>
+                        <input type="text" name="txt_meeting_theme" class="form-control" id="txt_meeting_theme"
+                            placeholder="会议主题">
                     </div>
                     <div class="form-group">
-                        <label for="txt_exam_place">考试地点</label>
-                        <input type="text" name="txt_exam_place" class="form-control" id="txt_exam_place"
-                            placeholder="考试地点">
+                        <label for="txt_meeting_place">地点</label>
+                        <input type="text" name="txt_meeting_place" class="form-control" id="txt_meeting_place"
+                            placeholder="会议地点">
                     </div>
                     <div class="form-group">
-                        <label for="txt_exam_class">参考班级</label>
-                        <input type="text" name="txt_exam_class" class="form-control" id="txt_exam_class"
-                            placeholder="参考班级">
+                        <label for="txt_meeting_participants">通知人员</label>
+                        <input type="text" name="txt_meeting_participants" class="form-control"
+                            id="txt_meeting_participants" placeholder="参会人员">
                     </div>
                     <div class="form-group">
-                        <label for="txt_exam_time">考试时间</label>
-                        <input type="text" name="txt_exam_time" class="form-control" id="txt_exam_time"
-                            placeholder="考试时间">
+                        <label for="txt_meeting_content">通知内容</label>
+                        <input type="text" name="txt_meeting_content" class="form-control" id="txt_meeting_content"
+                            placeholder="会议内容">
                     </div>
                     <div class="form-group">
-                        <label for="txt_exam_duration_time">时长</label>
-                        <input type="text" name="txt_exam_duration_time" class="form-control"
-                            id="txt_exam_duration_time" placeholder="时长">
+                        <label for="txt_meeting_desc">描述/其他</label>
+                        <input type="text" name="txt_meeting_desc" class="form-control" id="txt_meeting_desc"
+                            placeholder="描述/其他">
                     </div>
                     <div class="form-group">
-                        <label for="txt_exam_invigilator">监考人</label>
-                        <input type="text" name="txt_exam_invigilator" class="form-control" id="txt_exam_invigilator"
-                            placeholder="监考人">
-                    </div>
-                    <div class="form-group">
-                        <label for="txt_exam_desc">描述/其他</label>
-                        <input type="text" name="txt_exam_desc" class="form-control" id="txt_exam_desc"
+                        <label for="txt_meeting_time">时间</label>
+                        <input type="date" name="txt_meeting_time" class="form-control" id="txt_meeting_time"
                             placeholder="描述/其他">
                     </div>
                 </div>
@@ -75,9 +70,9 @@
 
     <div class="nav">
         <!-- 左侧黑体导航栏 -->
-        <div class="nav_box" value="meeting"><i class="iconfont">&#xe630;</i><span>会议</span></div>
-        <div class="nav_box nav_active" value="invigilate"><i class="iconfont">&#xe62f;</i><span>监考</span></div>
-        <div class="nav_box" value="audit"><i class="iconfont">&#xe63f;</i><span>听课</span></div>
+        <div class="nav_box " value="meeting"><i class="iconfont">&#xe630;</i><span>会议</span></div>
+        <div class="nav_box" value="invigilate"><i class="iconfont">&#xe62f;</i><span>监考</span></div>
+        <div class="nav_box nav_active" value="audit"><i class="iconfont">&#xe63f;</i><span>听课</span></div>
         <div class="nav_box" value="notification"><i class="iconfont">&#xe615;</i><span>通知</span></div>
         <div class="nav_box" value="other"><i class="iconfont">&#xe62b;</i><span>其他</span></div>
         <div class="nav_box" value="gather"><i class="iconfont">&#xe667;</i><span>汇总</span></div>
@@ -86,7 +81,7 @@
     <div class="container-fluid fluid">
         <div class="head">
             <!-- 头部标题 -->
-            <p class="head_title">监考任务</p>
+            <p class="head_title">通知任务</p>
             <span>0</span>
         </div>
 
@@ -110,17 +105,7 @@
                     <i class="iconfont" style="font-size: 22px; color:#95a5a6;">&#xe620;</i>
                     <span>添加任务</span>
                 </div>
-                <div class="task_box">
-                    <div class="prompt">
-                        <span></span>
-                        <button type="button" class="btn btn-default delete">删除任务</button>
-                        <button type="button" class="btn btn-default detail">查看详情</button>
-                    </div>
-                    <i class="iconfont">&#xe64c;</i>
-                    <p class="task_title">高频电子线路监考</p>
-                    <p class="task_box_des">2019-12-11 15:30:00</p>
-                    <p class="task_box_des">时长：2小时</p>
-                </div>
+                
             </div>
 
             <div aria-label="Page navigation" class="page_number">

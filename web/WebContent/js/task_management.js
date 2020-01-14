@@ -1,8 +1,6 @@
-
 $(function () {
-    function click1() {
-        alert(1);
-    }
+    let task_num = $(".content").children().length - 1; //任务数量
+    $(".head>span").html(task_num);
 
     $(".subnav>div").hover(function () { //鼠标移入div，设置字体图标变色
             $(this).find("i").addClass("i_hover");
@@ -18,9 +16,9 @@ $(function () {
         dataType: "json",
         success: function (response) {
 
-        	 for (let i in response) {
-                 $(".nav_content>.content").append(`<div class="task_box" task_id=${response[i].meetingid}></div>`);
-                 $(".task_box").eq(i).append(`<div class="prompt">
+            for (let i in response) {
+                $(".nav_content>.content").append(`<div class="task_box" task_id=${response[i].meetingid}></div>`);
+                $(".task_box").eq(i).append(`<div class="prompt">
                  <span></span>
                  <button type="button" class="btn btn-default delete">删除任务</button>
                  <button type="button" class="btn btn-default detail">查看详情</button>
@@ -29,9 +27,9 @@ $(function () {
              <p class="task_title">${response[i].theme}</p>
              <p class="task_box_des">${response[i].time}</p>
              <p class="task_box_des">地点：${response[i].place}</p>`);
-             }
-            $(".head>span").html(response.length);
-            
+            }
+            $(".head>span").html(task_num);
+
             $(".task_box i").on("click", function (ev) { //点击更多按钮显示prompt框
                 let $box = $(this).parent();
                 let $box_i = $(this);
@@ -80,6 +78,7 @@ $(function () {
                         dataType: "json",
                         success: function (response) {
                             $box.remove();
+                            window.reload();
                         },
                         error: function (xhr) {
                             console.log(xhr.responseText);
@@ -96,10 +95,7 @@ $(function () {
             console.log(xhr.responseText);
         },
         complete: function (xhr) {
-
             // let task_box = `<div class="task_box"></div>`
-
-           
 
         }
     });
@@ -108,27 +104,8 @@ $(function () {
     //黑色导航栏点击
     $(".nav_box").each(function (index) { //每个子盒子添加事件
         $(this).on("click", function () {
-            console.log()
             $(window).attr('location', $(this).attr('value') + '.html'); //页面跳转
         });
-
-
-        // if(index<=2){
-        //     $(this).on("click", function () {   
-        //         $url = `task_management?id=+${index}+.html`
-        //         $(this).addClass("nav_active"); //点击过后的盒子点亮
-        //         $(this).siblings().removeClass("nav_active");
-        //         $(".head>p").html($(this).children("span").html()+"任务");
-        //         // $(window).attr('location','https://blog.csdn.net/zSY_snake/article/details/79749155');  
-        //     });
-        // }
-        // else {
-        //     $(this).on("click", function () {   
-        //         $(this).addClass("nav_active"); //点击过后的盒子点亮
-        //         $(this).siblings().removeClass("nav_active");
-        //         $(".head>p").html($(this).children("span").html());
-        //     });
-        // }
     });
 
 
@@ -166,9 +143,9 @@ $(function () {
             url: "seldoingmeetingbyid",
             data: "data",
             success: function (response) {
-            	$(".nav_content>.content").empty();
-            	console.log(response);
-            	for (let i=0; i<response.length; i++) {
+                $(".nav_content>.content").empty();
+                console.log(response);
+                for (let i = 0; i < response.length; i++) {
                     $(".nav_content>.content").append(`<div class="task_box" task_id=${response[i].meetingid}></div>`);
                     $(".task_box").eq(i).append(`<div class="prompt">
                     <span></span>
@@ -197,9 +174,9 @@ $(function () {
             url: "seldonemeetingbyid",
             data: "data",
             success: function (response) {
-            	$(".nav_content>.content").empty();
-            	console.log(response);
-            	for (let i=0; i<response.length; i++) {
+                $(".nav_content>.content").empty();
+                console.log(response);
+                for (let i = 0; i < response.length; i++) {
                     $(".nav_content>.content").append(`<div class="task_box" task_id=${response[i].meetingid}></div>`);
                     $(".task_box").eq(i).append(`<div class="prompt">
                     <span></span>
@@ -237,7 +214,7 @@ $(function () {
                 "time": $("#txt_meeting_time").val()
             },
             success: function (response) {
-
+                window.location.reload();
             },
             error: function (xhr) {
                 console.log(xhr.responseText);
@@ -249,7 +226,6 @@ $(function () {
     });
 
     $(".task_box i").on("click", function (ev) { //点击更多按钮显示prompt框
-    	alert(0)
         let $box = $(this).parent();
         let $box_i = $(this);
         let x = $box_i.offset().left;
@@ -297,6 +273,7 @@ $(function () {
                 dataType: "json",
                 success: function (response) {
                     $box.remove();
+                    $(".head>span").html($(".content").children().length - 1);
                 },
                 error: function (xhr) {
                     console.log(xhr.responseText);
@@ -312,25 +289,6 @@ $(function () {
     $(".prompt").children(".detail").on("click", function () { //查看任务详情按钮
 
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //整个会议模块
-    // $(".subnav_1").on("click", function () { //我创建的项目
-
-    // });
-
-
 
 
 })
