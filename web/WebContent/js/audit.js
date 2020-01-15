@@ -12,7 +12,7 @@ $(function () {
 
     $.ajax({ //页面加载成功，获取当前模块的所有数据
         type: "get",
-        url: "selmeetingbyid",
+        url: "",
         dataType: "json",
         success: function (response) {
 
@@ -24,9 +24,9 @@ $(function () {
                  <button type="button" class="btn btn-default detail">查看详情</button>
              </div>
              <i class="iconfont" title="查看更多">&#xe64c;</i>
-             <p class="task_title">${response[i].theme}</p>
-             <p class="task_box_des">${response[i].time}</p>
-             <p class="task_box_des">地点：${response[i].place}</p>`);
+             <p class="task_title">${response[i].class_name}</p>
+             <p class="task_box_des">${response[i].audit_class_time}</p>
+             <p class="task_box_des">地点：${response[i].class_place}</p>`);
             }
             $(".head>span").html(task_num);
 
@@ -71,14 +71,14 @@ $(function () {
 
                     $.ajax({
                         type: "post",
-                        url: "delmeeting",
+                        url: "",
                         data: {
                             "task_id": delete_task_id
                         },
                         dataType: "json",
                         success: function (response) {
                             $box.remove();
-                            window.reload();
+                            window.location.reload();
                         },
                         error: function (xhr) {
                             console.log(xhr.responseText);
@@ -118,10 +118,10 @@ $(function () {
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: "url",
+            url: "",
             data: "data",
             success: function (response) {
-
+                window.location.reload();
                 //生成页码(第一页active)
                 //生成task_box
                 //生成head任务总数量徽章
@@ -140,20 +140,20 @@ $(function () {
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: "seldoingmeetingbyid",
+            url: "",
             data: "data",
             success: function (response) {
                 $(".nav_content>.content").empty();
                 console.log(response);
                 for (let i = 0; i < response.length; i++) {
-                    $(".nav_content>.content").append(`<div class="task_box" task_id=${response[i].meetingid}></div>`);
+                    $(".nav_content>.content").append(`<div class="task_box" task_id=${response[i].auditId}></div>`);
                     $(".task_box").eq(i).append(`<div class="prompt">
                     <span></span>
                     <button type="button" class="btn btn-default delete">删除任务</button>
                     <button type="button" class="btn btn-default detail">查看详情</button>
                 </div>
                 <i class="iconfont" title="查看更多">&#xe64c;</i>
-                <p class="task_title">${response[i].theme}</p>
+                <p class="task_title">${response[i].name}</p>
                 <p class="task_box_des">${response[i].time}</p>
                 <p class="task_box_des">地点：${response[i].place}</p>`);
                 }
@@ -171,20 +171,20 @@ $(function () {
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: "seldonemeetingbyid",
+            url: "",
             data: "data",
             success: function (response) {
                 $(".nav_content>.content").empty();
                 console.log(response);
                 for (let i = 0; i < response.length; i++) {
-                    $(".nav_content>.content").append(`<div class="task_box" task_id=${response[i].meetingid}></div>`);
+                    $(".nav_content>.content").append(`<div class="task_box" task_id=${response[i].auditId}></div>`);
                     $(".task_box").eq(i).append(`<div class="prompt">
                     <span></span>
                     <button type="button" class="btn btn-default delete">删除任务</button>
                     <button type="button" class="btn btn-default detail">查看详情</button>
                 </div>
                 <i class="iconfont" title="查看更多">&#xe64c;</i>
-                <p class="task_title">${response[i].theme}</p>
+                <p class="task_title">${response[i].class_name}</p>
                 <p class="task_box_des">${response[i].time}</p>
                 <p class="task_box_des">地点：${response[i].place}</p>`);
                 }
@@ -206,21 +206,18 @@ $(function () {
             dataType: "json",
             url: "insmeeting",
             data: {
-                "theme": $("#txt_meeting_theme").val(),
-                "place": $("#txt_meeting_place").val(),
-                "people": $("#txt_meeting_participants").val(),
-                "content": $("#txt_meeting_content").val(),
-                "other": $("#txt_meeting_desc").val(),
-                "time": $("#txt_meeting_time").val()
+                "theme": $("#class_name").val(),
+                "place": $("#place").val(),
+                "teacher": $("#teacher").val(),
+                "description": $("#desc").val(),
+                "time": $("#time").val()
             },
             success: function (response) {
+                /**这里可以添加一个动画 */
                 window.location.reload();
             },
             error: function (xhr) {
                 console.log(xhr.responseText);
-            },
-            complete: function () {
-
             }
         });
     });
@@ -266,7 +263,7 @@ $(function () {
 
             $.ajax({
                 type: "post",
-                url: "delmeeting",
+                url: "",
                 data: {
                     "task_id": delete_task_id
                 },
@@ -287,7 +284,7 @@ $(function () {
     });
 
     $(".prompt").children(".detail").on("click", function () { //查看任务详情按钮
-        
+
     });
 
 

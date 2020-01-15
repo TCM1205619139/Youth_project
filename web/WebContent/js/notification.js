@@ -12,7 +12,7 @@ $(function () {
 
     $.ajax({ //页面加载成功，获取当前模块的所有数据
         type: "get",
-        url: "selmeetingbyid",
+        url: "",
         dataType: "json",
         success: function (response) {
 
@@ -140,7 +140,7 @@ $(function () {
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: "seldoingmeetingbyid",
+            url: "",
             data: "data",
             success: function (response) {
                 $(".nav_content>.content").empty();
@@ -171,7 +171,7 @@ $(function () {
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: "seldonemeetingbyid",
+            url: "",
             data: "data",
             success: function (response) {
                 $(".nav_content>.content").empty();
@@ -204,14 +204,14 @@ $(function () {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "insmeeting",
+            url: "",
             data: {
-                "theme": $("#txt_meeting_theme").val(),
-                "place": $("#txt_meeting_place").val(),
-                "people": $("#txt_meeting_participants").val(),
-                "content": $("#txt_meeting_content").val(),
-                "other": $("#txt_meeting_desc").val(),
-                "time": $("#txt_meeting_time").val()
+                "theme": $("#notification_theme").val(),
+                "place": $("#place").val(),
+                "people": $("#people").val(),
+                "content": $("#content").val(),
+                "other": $("#description").val(),
+                "time": $("#time").val()
             },
             success: function (response) {
                 window.location.reload();
